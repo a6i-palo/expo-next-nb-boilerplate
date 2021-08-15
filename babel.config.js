@@ -1,4 +1,8 @@
 module.exports = {
-    presets: ['@expo/next-adapter/babel'],
-    plugins: ['transform-inline-environment-variables', ['@babel/plugin-proposal-class-properties', {loose: true}]],
+    presets: ['@expo/next-adapter/babel', 'next/babel'],
+    plugins: [
+        'transform-inline-environment-variables',
+        ['@babel/plugin-proposal-class-properties'],
+        ['react-native-web', {commonjs: true}],
+    ],
 };
