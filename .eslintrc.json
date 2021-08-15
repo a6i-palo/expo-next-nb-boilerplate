@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next","next/core-web-vitals", "eslint-config-prettier"],
+  "plugins": ["eslint-plugin-prettier", "react"],
+  "rules": {
+    "semi": "error",
+    "no-console": "error",
+    "prettier/prettier": "error"
+  }
 }
