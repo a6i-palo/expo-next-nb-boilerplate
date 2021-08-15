@@ -1,5 +1,5 @@
 {
-  "name": "gsg-client",
+  "name": "expo-next-nb-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,11 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "web": "yarn dev",
-    "ios": "expo start -i",
-    "android": "expo start -a",
+    "export": "next export",
+    "dev:web": "yarn dev",
+    "dev:ios": "expo start -i",
+    "dev:android": "expo start -a",
     "test": "jest",
-    "prettier": "prettier --write \"./{,**/}*.{js,ts}{,x}\""
+    "prettier": "prettier --write \"src/{,**/}*.{js,ts}{,x}\"",
+    "sb": "start-storybook -p 7007",
+    "sb:ios": "STORYBOOK=true expo start -i",
+    "sb:android": "STORYBOOK=true expo start -a",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "expo": "~42.0.0",
@@ -28,22 +33,35 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@expo/next-adapter": "^3.0.4",
+    "@expo/webpack-config": "^0.14.0",
+    "@react-native-async-storage/async-storage": "^1.15.5",
+    "@storybook/addon-actions": "^5.3.21",
+    "@storybook/addon-knobs": "^5.3.21",
+    "@storybook/addon-links": "^5.3.21",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/react": "^6.3.7",
+    "@storybook/react-native": "^5.3.25",
+    "@storybook/react-native-server": "^5.3.23",
     "@types/enzyme": "^3.10.9",
     "@types/jest": "^27.0.1",
-    "@types/react": "17.0.17",
+    "@types/react": "^17.0.17",
     "@types/react-native": "^0.60.22",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "enzyme": "^3.11.0",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "jest-expo-enzyme": "^1.2.1",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^8.0.0",
     "prettier": "^2.3.2",
-    "typescript": "4.3.5"
+    "typescript": "^4.3.5"
   },
   "license": "MIT"
 }

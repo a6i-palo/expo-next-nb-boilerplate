@@ -1,0 +1,9 @@
+node_modules
+coverage
+static/lib
+dist
+webpack.*
+postcss.*
+out
+.expo
+.next
