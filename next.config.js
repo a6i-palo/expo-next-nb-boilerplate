@@ -1,7 +1,7 @@
 const {withExpo} = require('@expo/next-adapter');
 const withPlugins = require('next-compose-plugins');
 const withTM = require('next-transpile-modules')([
-    'native-base',
+    'react-native-web',
     'react-native-svg',
     'styled-components',
     'react-native-safe-area-context',
