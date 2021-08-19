@@ -8,7 +8,7 @@ export default function CenterView({children}) {
 }
 
 CenterView.defaultProps = {
-    children: null,
+    children: <></>,
 };
 
 CenterView.propTypes = {
